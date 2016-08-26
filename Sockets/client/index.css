@@ -48,16 +48,9 @@ body {
     background-color: rgb(17,94,162);
 }
 
-.user-circle span, .my-circle span, #led-container span {
+.user-circle span, .my-circle span, #clean-container span, #toogle-container span {
     vertical-align: middle;
     vertical-align: -webkit-baseline-middle;
-}
-
-#led-container {
-    width: 4em;
-    height: 2.5em;
-    margin-left: 1em;
-    text-align: center;
 }
 
 .off {
@@ -70,7 +63,14 @@ body {
     border: 1px solid #7f8c8d;
 }
 
-#led-container > span {
+#clean-container {
+    width: 4em;
+    height: 2.5em;
+    margin-left: 1em;
+    text-align: center;
+}
+
+#clean-container > span {
     padding: 3em 0em;
     color: white;
     font-weight: bold;
@@ -87,6 +87,19 @@ body {
 
 #clean-link-container {
     margin-top: 1em;
+}
+
+#toogle-container {
+    width: 4em;
+    height: 2.5em;
+    margin-left: 1em;
+    text-align: center;
+}
+
+#toogle-container > span {
+    padding: 3em 0em;
+    color: white;
+    font-weight: bold;
 }
 
 #toogle-link {

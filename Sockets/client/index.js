@@ -8,26 +8,41 @@ $('form').submit(function() {
     return false;
 });
 
+$("#toogle-link").on('click', function(e){
+    socket.emit('toogle', {value: 0, userId: userId});
+});
+
+socket.on('toogle', function(msg) {
+    if(msg.value === false) {
+        $('#messages').prepend($('<li>Toogle: OFF<span> - '+msg.userId+'</span></li>'));
+        $("#toogle-container").removeClass("on");
+        $("#toogle-container").addClass("off");
+        $("#toogle-container span").text("OFF");
+    }
+    else if(msg.value === true) {
+        $('#messages').prepend($('<li>Toogle: ON<span> - '+msg.userId+'</span></li>'));
+        $("#toogle-container").removeClass("off");
+        $("#toogle-container").addClass("on");
+        $("#toogle-container span").text("ON");        
+    }
+});
+
 $("#clean-link").on('click', function(e){
     socket.emit('clean', {value: 0, userId: userId});
 });
 
 socket.on('clean', function(msg) {
     if(msg.value === false) {
-        $('#messages').prepend($('<li>Clean LED: OFF<span> - '+msg.userId+'</span></li>'));
-        $("#led-container").removeClass("on");
-        $("#led-container").addClass("off");
-        $("#led-container span").text("OFF");
+        $('#messages').prepend($('<li>Clean: OFF<span> - '+msg.userId+'</span></li>'));
+        $("#clean-container").removeClass("on");
+        $("#clean-container").addClass("off");
+        $("#clean-container span").text("OFF");
     }
     else if(msg.value === true) {
-        $('#messages').prepend($('<li>Clean LED: ON<span> - '+msg.userId+'</span></li>'));
-        $("#led-container").removeClass("off");
-        $("#led-container").addClass("on");
-        $("#led-container span").text("ON");
-        delay(1000);
-        $("#led-container").removeClass("on");
-        $("#led-container").addClass("off");
-        $("#led-container span").text("OFF");
+        $('#messages').prepend($('<li>Clean: ON<span> - '+msg.userId+'</span></li>'));
+        $("#clean-container").removeClass("off");
+        $("#clean-container").addClass("on");
+        $("#clean-container span").text("ON");        
     }
 });
 
