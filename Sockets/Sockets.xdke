@@ -23,8 +23,8 @@
         "name": "LICENSE.md"
       },
       "main.js": {
-        "previousModTime": 1472198194320,
-        "modified": 1472198194320,
+        "previousModTime": 1472228858296,
+        "modified": 1472228858296,
         "seen": true,
         "name": "main.js"
       },
@@ -47,8 +47,8 @@
         "name": "Sockets.xdk"
       },
       "Sockets.xdke": {
-        "previousModTime": 1472198494008,
-        "modified": 1472198494008,
+        "previousModTime": 1472228789450,
+        "modified": 1472228789450,
         "seen": true,
         "name": "Sockets.xdke"
       },
@@ -84,11 +84,8 @@
       }
     },
     "boardFileStatus": {
-      "client/index.html": {
-        "previousModTime": 1472198513114
-      },
-      "client/index.js": {
-        "previousModTime": 1472198513114
+      "main.js": {
+        "previousModTime": 1472228860527
       }
     }
   }
